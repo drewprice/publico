@@ -1,0 +1,32 @@
+<h1><%= @tag.name.upcase %></h1>
+
+	<ul>
+		<% if @tag.articles.count == 0 %>
+			<li>Sorry, there aren't any articles with this tag.</li>
+		<% end %>	
+
+		<% @tag.articles.sort_by(&:title).each do |article| %>
+		<div class="line"></div>
+			<li>
+				<%= link_to article.title, article_path(article)  %>
+			</li>
+		<div class="line"></div>
+		<% end %>
+	</ul>
+
+<div id="back">
+
+	<% if params[:article_id].present? %>
+		<%= link_to "back", article_path(params[:article_id]), class: "back" %>
+	<% else %>
+		<%= link_to "back", tags_path, class: "back" %>
+	<% end %>
+</div>
+
+<%= link_to "view all articles", articles_path, class: "nav_buttons" %>
+<%= link_to "new article", new_article_path(tag: @tag.name, tag_id: @tag.id), class: "nav_buttons", id: "nav_new_article" %>
+<%= link_to "view all tags", tags_path, class: "nav_buttons" %>
+
+<style type="text/css">
+	#back {border-top: 1px solid transparent; margin-bottom: 5%;}
+</style>

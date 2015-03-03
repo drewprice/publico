@@ -1,0 +1,10 @@
+<h1>CREATE A NEW ARTICLE</h1>
+<%= render 'form' %>
+
+<% if params[:tag].present? %>
+	<div id="back">
+		<%= link_to 'back', tag_path(params[:tag_id]), class: 'back' %>
+	</div>
+<% else %>
+	<%= render 'back' %>	
+<% end %>

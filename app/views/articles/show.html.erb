@@ -1,0 +1,18 @@
+<h1>
+	<%= @article.title.upcase %>
+</h1>
+
+<%= render 'image' %>
+<div class="article_body">
+	<p><%= @article.body %></p>
+</div>
+
+<%= render 'tags' %>
+
+<%= render 'back' %>
+
+<div id="comments">
+	<%= render partial: '/articles/comment', collection: @article.comments %>
+</div>
+
+<%= render partial: 'comments/form' %>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<title>PÚBLICO | Blogosquare</title>
+ 	<!-- FOR "main.css": -->
+	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300' rel='stylesheet' type='text/css'> -->
+	<!-- FOR "new_main.css": -->
+	<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400italic,400|Open+Sans:800' rel='stylesheet' type='text/css'>
+
+	<%= favicon_link_tag %>
+
+ 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+ 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+ 	<%= csrf_meta_tags %>
+</head>
+
+<body>
+	
+	<%= render 'layouts/flash' %>
+
+	<div id="container">
+		
+		<div id="content">
+			
+			<%= yield %>
+		
+		</div>
+	</div>
+	
+	<%= render 'layouts/login_status' %>
+</body>
+</html>

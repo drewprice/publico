@@ -1,0 +1,21 @@
+<h1>AUTHORS</h1>
+
+<table>
+
+  <tbody>
+    <% @authors.each do |author| %>
+      <tr>
+        <td><%= link_to "#{author.username}", author_path(author) %></td>
+        <td><i><%= mail_to(author.email) %></i></td>
+        <td class="author_functions"><%= link_to 'edit', edit_author_path(author), class:"back" %></td>
+        <td class="author_functions"><%= link_to 'destroy', author, method: :delete, class:"back",data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "view all articles", articles_path, class: "nav_buttons" %>
+<%= link_to 'new author', new_author_path, class: "nav_buttons", id: "nav_new_article" %>
+<%= link_to "view all tags", tags_path, class: "nav_buttons" %>
