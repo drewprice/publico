@@ -85554,3 +85554,145 @@ Started GET "/assets/comments-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::
 
 
 Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-03-05 13:04:33 -0700
+
+
+Started GET "/" for ::1 at 2015-03-05 13:16:15 -0700
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (25.9ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/_list.html.erb (28.5ms)
+  Rendered articles/_new_article_link.html.erb (0.6ms)
+  Rendered articles/index.html.erb within layouts/application (86.1ms)
+  Rendered layouts/_flash.html.erb (0.2ms)
+  Rendered layouts/_login_status.html.erb (0.6ms)
+Completed 200 OK in 1299ms (Views: 1272.3ms | ActiveRecord: 25.9ms)
+
+
+Started GET "/assets/new_main-a079659892e9c1e64afc61d11e3ba2b7.css?body=1" for ::1 at 2015-03-05 13:16:17 -0700
+
+
+Started GET "/assets/application-3c973c54b3175246cce7dd93ec78654f.css?body=1" for ::1 at 2015-03-05 13:16:17 -0700
+
+
+Started GET "/assets/articles-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-03-05 13:16:17 -0700
+
+
+Started GET "/assets/author_sessions-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-03-05 13:16:17 -0700
+
+
+Started GET "/assets/comments-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-03-05 13:16:17 -0700
+
+
+Started GET "/assets/tags-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-03-05 13:16:17 -0700
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-03-05 13:16:17 -0700
+
+
+Started GET "/assets/turbolinks-924184401b7d116eadaaefc96895fa84.js?body=1" for ::1 at 2015-03-05 13:16:17 -0700
+
+
+Started GET "/assets/articles-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-03-05 13:16:17 -0700
+
+
+Started GET "/assets/author_sessions-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-03-05 13:16:17 -0700
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-03-05 13:16:17 -0700
+
+
+Started GET "/assets/comments-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-03-05 13:16:17 -0700
+
+
+Started GET "/assets/application-367c100594a401afda66dc00316e49ba.js?body=1" for ::1 at 2015-03-05 13:16:17 -0700
+
+
+Started GET "/assets/tags-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-03-05 13:16:17 -0700
+
+
+Started GET "/articles/1" for ::1 at 2015-03-05 13:16:21 -0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/_image.html.erb (4.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 1]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 1]]
+  Rendered articles/_tags.html.erb (5.1ms)
+  Rendered articles/_back.html.erb (0.5ms)
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered articles/_comment.html.erb (0.0ms)
+  Rendered comments/_form.html.erb (2.2ms)
+  Rendered articles/show.html.erb within layouts/application (84.1ms)
+  Rendered layouts/_flash.html.erb (0.2ms)
+  Rendered layouts/_login_status.html.erb (0.3ms)
+Completed 200 OK in 260ms (Views: 257.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/1" for ::1 at 2015-03-05 13:18:49 -0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/_image.html.erb (3.7ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 1]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 1]]
+  Rendered articles/_tags.html.erb (3.8ms)
+  Rendered articles/_back.html.erb (0.3ms)
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered articles/_comment.html.erb (0.0ms)
+  Rendered comments/_form.html.erb (1.2ms)
+  Rendered articles/show.html.erb within layouts/application (33.9ms)
+  Rendered layouts/_flash.html.erb (0.2ms)
+  Rendered layouts/_login_status.html.erb (0.2ms)
+Completed 200 OK in 177ms (Views: 174.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/author_sessions-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-03-05 13:18:49 -0700
+
+
+Started GET "/assets/articles-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-03-05 13:18:49 -0700
+
+
+Started GET "/assets/application-3c973c54b3175246cce7dd93ec78654f.css?body=1" for ::1 at 2015-03-05 13:18:49 -0700
+
+
+Started GET "/assets/new_main-a079659892e9c1e64afc61d11e3ba2b7.css?body=1" for ::1 at 2015-03-05 13:18:49 -0700
+
+
+Started GET "/assets/comments-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-03-05 13:18:49 -0700
+
+
+Started GET "/assets/tags-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-03-05 13:18:49 -0700
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-03-05 13:18:49 -0700
+
+
+Started GET "/assets/turbolinks-924184401b7d116eadaaefc96895fa84.js?body=1" for ::1 at 2015-03-05 13:18:49 -0700
+
+
+Started GET "/assets/articles-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-03-05 13:18:49 -0700
+
+
+Started GET "/assets/comments-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-03-05 13:18:49 -0700
+
+
+Started GET "/assets/author_sessions-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-03-05 13:18:49 -0700
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-03-05 13:18:49 -0700
+
+
+Started GET "/assets/application-367c100594a401afda66dc00316e49ba.js?body=1" for ::1 at 2015-03-05 13:18:49 -0700
+
+
+Started GET "/assets/tags-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-03-05 13:18:49 -0700
+
+
+Started GET "/articles" for ::1 at 2015-03-05 13:18:52 -0700
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/_list.html.erb (2.6ms)
+  Rendered articles/_new_article_link.html.erb (0.8ms)
+  Rendered articles/index.html.erb within layouts/application (19.9ms)
+  Rendered layouts/_flash.html.erb (0.1ms)
+  Rendered layouts/_login_status.html.erb (0.2ms)
+Completed 200 OK in 178ms (Views: 176.7ms | ActiveRecord: 0.2ms)
