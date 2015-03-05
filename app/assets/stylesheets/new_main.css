@@ -170,13 +170,13 @@
 	font-size: 0.75em;
 	}
 
-.login_status {
+.login_status, .login_status2 {
 	line-height: 65px;
 	text-align: center;
 	font-style: italic;
 }
 
-	.login {
+	.login, .new_user {
 		display: table-cell;
 		height: 65px;
 		width: 65px;
